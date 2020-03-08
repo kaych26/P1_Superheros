@@ -17,8 +17,11 @@ GA Project 1
 ---------------------
 Wireframes files uploaded to imgbb.com
 ---------------------
-	![imageAlt](https://i.ibb.co/TvQKmbJ/1-Superhero-Homepage.png)
-	![imageAlt](https://i.ibb.co/SXkk0Nk/2-Superhero-image-desc.png)
+	![Master Page] https://i.ibb.co/TvQKmbJ/1-Superhero-Homepage.png
+	![Img Desc Page] https://i.ibb.co/SXkk0Nk/2-Superhero-image-desc.png
+
+	![Master Page](1-Superhero-Homepage.png)
+	![Img Desc Page](2-Superhero-image-desc.png)
 
 ---------------------
   API: 
