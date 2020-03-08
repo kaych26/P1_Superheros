@@ -9,36 +9,34 @@ GA Project 1
 ---------------------
   Description: 
 ---------------------
-	1. User enters a superhero's name or first few characters of the name.
-	2. Retrieves a list of superhero data that matches user input.
-	3. Data will include superhero image, name, description, etc.
-	4. Display image and data in column/row format
+1. User enters a superhero's name or first few characters of the name.
+2. Retrieves a list of superhero data that matches user input.
+3. Data will include superhero image, name, description, etc.
+4. Display image and data in column/row format
 
 ---------------------
 Wireframes files uploaded to imgbb.com
 ---------------------
-	![Master Page] https://i.ibb.co/TvQKmbJ/1-Superhero-Homepage.png
-	![Img Desc Page] https://i.ibb.co/SXkk0Nk/2-Superhero-image-desc.png
+![Master Page] https://i.ibb.co/TvQKmbJ/1-Superhero-Homepage.png
+![Img Desc Page] https://i.ibb.co/SXkk0Nk/2-Superhero-image-desc.png
 
-	![Master Page](1-Superhero-Homepage.png)
-	![Img Desc Page](2-Superhero-image-desc.png)
+![Master Page](1-Superhero-Homepage.png)
+![Img Desc Page](2-Superhero-image-desc.png)
 
 ---------------------
   API: 
 ---------------------
-   Mavel API 
-	The Marvel Comics API’s base endpoint is http(s)://gateway.marvel.com/
+	Mavel API: The Marvel Comics API’s base endpoint is http(s)://gateway.marvel.com/
 
-   API Limitation (free account):
-	1000 per day
+	API Limitation (free account): 1000 per day
 
-   API Attribution: https://developer.marvel.com/documentation/attribution
-	Must include attribution on all web pages: "Data provided by Marvel. © 2014 Marvel"
-	Linking back to Marvel if displaying thumbnail width greater than 100px 
+	API Attribution: https://developer.marvel.com/documentation/attribution
+	   Must include attribution on all web pages: "Data provided by Marvel. © 2014 Marvel"
+  	   Linking back to Marvel if displaying thumbnail width greater than 100px 
 
-   API Documentation
-	https://developer.marvel.com/
-	https://developer.marvel.com/docs#!/public/getCharacterIndividual_get_1
+	API Documentation
+	   https://developer.marvel.com/
+  	   https://developer.marvel.com/docs#!/public/getCharacterIndividual_get_1
 
 ---------------------
   MVP Features
