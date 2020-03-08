@@ -15,12 +15,11 @@ GA Project 1
 4. Display image and data in column/row format
 
 ---------------------
-Wireframes files uploaded to imgbb.com
----------------------
-![Master Page] https://i.ibb.co/TvQKmbJ/1-Superhero-Homepage.png
-![Img Desc Page] https://i.ibb.co/SXkk0Nk/2-Superhero-image-desc.png
-
-![Master Page](1-Superhero-Homepage.png)
+Wireframes 
+--------------------
+	Page 1: Master
+	Page 2: Superhero image and desciptions
+![Img Desc Page](1-Superhero-Homepage.png)
 ![Img Desc Page](2-Superhero-image-desc.png)
 
 ---------------------
