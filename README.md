@@ -46,7 +46,7 @@ Wireframes files uploaded to imgbb.com
 	3. Handle event handler
 	4. API call to retrieve and display superhero image and description.
 	5. DOM update
-	6. Customize display format on desktop, tablet and iphone (css customation)
+	6. Customize display format on desktop, tablet and iphone (css stylesheet)
 
 ---------------------
   POST MVP: 
