@@ -19,8 +19,8 @@ Wireframes
 --------------------
 	Page 1: Master
 	Page 2: Superhero image and desciptions
-![Img Desc Page](1-Superhero-Homepage.png)
-![Img Desc Page](2-Superhero-image-desc.png)
+![Img Desc Page](img/1-Superhero-Homepage.png)
+![Img Desc Page](img/2-Superhero-image-desc.png)
 
 ---------------------
   API: 
