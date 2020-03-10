@@ -6,29 +6,82 @@ const marvel_attribution = "Data provided by Marvel. © 2014 Marvel";
 
 // "http://gateway.marvel.com/v1/public/characters?name=spiderman";
 const marvel_endpoint = "http://gateway.marvel.com/v1/public/characters?";
+
+// ts timestamp or string value
 const ts = "1";
 
-// Generated md5 hash value from
+// Generated md5 secure hash value from
 // "https://lig-membres.imag.fr/donsez/cours/exemplescourstechnoweb/js_securehash/"
 // md5(ts + privateKey + publicKey)
+
+//-----------------------------------//
+// Global Variables
+//-----------------------------------//
 const hash = "3adf7bb9a202323bbf48908e0b94cb7b";
 
-// const auth = `&ts=${ts}&apikey=${publicKey}&hash=${hash}`;
 const auth = `&ts=${ts}&apikey=${publicKey}&hash=${hash}`;
+//const query = `${marvel_endpoint}&nameStartsWith=iron man${auth}`;
 
-const query = `${marvel_endpoint}&nameStartsWith=spider${auth}`;
+const form = document.querySelector("form");
+const button = document.querySelector("#submit");
+const input = document.querySelector("#hero-input");
+const heroContainer = document.querySelector(".hero-container");
 
-const superHero = [];
+// image size - append the size option to the image jpg
+// Reference https://developer.marvel.com/documentation/images
+//
+const marvel_imgSize = "standard_medium";
 
 // axios
-console.log("START HERE");
 
 const getHero = async () => {
   let response = await axios.get(query);
   let results = response.data.data.results;
-  debugger;
 
   console.log(response);
 };
 
-getHero();
+let allHeros = [];
+const readResults = result => {
+  for (let i = 0; i < result.length; i++) {
+    // for (let i = 0; i < 1; i++) {
+    allHeros.push({
+      name: result[i].name,
+      img: result[i].thumbnail.path,
+      ext: result[i].thumbnail.extension,
+      desc: result[i].description,
+      uri: result[i].resourceURI
+    });
+
+    // debugger;
+  }
+  displayResults(allHeros);
+};
+const displayResults = heros => {
+  let html = "";
+  let img = "";
+
+  for (let i = 0; i < heros.length; i++) {
+    console.log(`==>${heros[0].img}`);
+    console.log(heros[0].ext);
+
+    img = `<img src="${heros[i].img}/${marvel_imgSize}.${heros[i].ext}" alt="Superhero Img"></img>`;
+    //console.log(img);
+    html += `<div class="hero-desc">${img}<h3 class="hero-name">${heros[i].name}</h3></div>`;
+  }
+  heroContainer.innerHTML = html;
+};
+
+let userInput = "";
+form.addEventListener("submit", async event => {
+  event.preventDefault();
+  userInput = input.value;
+  let query = `${marvel_endpoint}&nameStartsWith=${userInput}${auth}`;
+
+  let response = await axios.get(query);
+  let result = response.data.data.results;
+  debugger;
+  readResults(result);
+});
+
+// getHero();

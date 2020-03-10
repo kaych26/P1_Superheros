@@ -3,12 +3,49 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Bangers&display=swap"
+      rel="stylesheet"
+    />
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script defer src="superheros.js"></script>
     <link rel="stylesheet" type="text/css" media="screen" href="styles.css" />
-    <title>Document</title>
+    <title>Superhero</title>
   </head>
   <body>
-    SUPER HEROS
+    <header>
+      <div>
+        <a id="home-link" href="index.html">HOME</a>
+      </div>
+    </header>
+
+    <main>
+      <section id="hero-cover">
+        <div id="hero-image">
+          <!-- <img src="img/Marvel-Superheroes.jpg" alt="Hero cover" /> -->
+          <!-- <img src="#" alt="Hero cover" /> -->
+        </div>
+      </section>
+    </main>
+
+    <div id="form-frame">
+      <form>
+        <div id="input-container">
+          <label id="hero-text">Superhero Name:</label>
+          <input
+            type="text"
+            name="name"
+            value=""
+            placeholder="iron man, spider man ..."
+            id="hero-input"
+          />
+          <a href="heroList.html">
+            <button id="submit">Get Hero</button>
+          </a>
+        </div>
+      </form>
+    </div>
+
+    <section class="hero-container"></section>
   </body>
 </html>

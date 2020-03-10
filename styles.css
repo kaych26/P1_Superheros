@@ -1,3 +1,100 @@
 body {
-  color: #ff4b4b;
+  margin: 0;
+  /* color: #ff4b4b; */
+  /* text-align: center; */
+}
+
+header {
+  height: 80px;
+  width: 100%;
+  display: flex;
+  background-color: red;
+  border: 2px solid blue;
+  align-items: center;
+}
+
+header div {
+  width: 200px;
+  margin-left: 10%;
+  border: 3px solid rebeccapurple;
+}
+
+div a {
+  text-decoration: none;
+  font-family: "Bangers", cursive, Arial, Helvetica, sans-serif;
+  font-size: 30px;
+  color: blue;
+}
+
+#hero-cover {
+  height: 450px;
+  width: 100%;
+  /* display: flex; */
+  /* background: red; */
+  border: 5px solid orange;
+  background-image: url(img/Marvel-Superheroes.jpg);
+  background-size: cover;
+}
+#hero-image {
+  /* border: 5px solid cyan; */
+  width: 100%;
+}
+#form-frame {
+  border: 2px solid green;
+  height: 130px;
+}
+#input-container {
+  margin: 0 auto;
+  height: 120px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid orchid;
+}
+
+#hero-text {
+  font-family: "Bangers", cursive, Arial, Helvetica, sans-serif;
+  border: 2px solid blue;
+  font-size: 24px;
+  margin-right: 10px;
+}
+#hero-input {
+  font-size: 16px;
+  width: 35%;
+  border: 2px solid yellow;
+  padding: 0 5px;
+}
+
+#submit {
+  margin-left: 20px;
+  padding: 5px 20px;
+  font-size: 15px;
+  text-align: center;
+  border-radius: 6px;
+  font-weight: bold;
+  background-color: black;
+  /* border: 2px solid black; */
+  color: white;
+}
+#submit:hover {
+  background-color: red;
+  border-color: red;
+}
+.hero-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+  border: 5px solid grey;
+}
+
+.hero-desc {
+  border: 2px solid red;
+  width: 150px;
+  text-align: center;
+}
+.hero-name {
+  font-family: "Bangers", cursive, Arial, Helvetica, sans-serif;
+  font-size: 13px;
 }
