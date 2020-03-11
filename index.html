@@ -21,38 +21,39 @@
 
   <body>
     <div id="page-container">
-      <header>
-        <div id="marvel-img">
-          <a href="index.html">
-            <img
-              src="img/marvel.jpeg"
-              alt="MARVEL"
-              width="100px"
-              height="40px"
-            />
-          </a>
+      <div id="content-wrap">
+        <header>
+          <div id="marvel-img">
+            <a href="index.html">
+              <img
+                src="img/marvel.jpeg"
+                alt="MARVEL"
+                width="100px"
+                height="40px"
+              />
+            </a>
 
-          <!-- <img src="img/marvel.jpeg" alt="MARVEL" /> -->
-        </div>
-        <!-- <div id="home">
-        <a id="home-link" href="index.html">HOME</a>
-      </div> -->
-      </header>
-
-      <main>
-        <section id="hero-cover">
-          <div id="hero-image">
-            <!-- <img src="img/Marvel-Superheroes.jpg" alt="Hero cover" /> -->
-            <!-- <img src="#" alt="Hero cover" /> -->
+            <!-- <img src="img/marvel.jpeg" alt="MARVEL" /> -->
           </div>
-        </section>
+          <!-- <div id="home">
+            <a id="home-link" href="index.html">HOME</a>
+          </div> -->
+        </header>
 
-        <div>
-          <form id="form-frame">
-            <h1>
+        <main>
+          <section id="hero-cover">
+            <div id="hero-image">
+              <!-- <img src="img/Marvel-Superheroes.jpg" alt="Hero cover" /> -->
+              <!-- <img src="#" alt="Hero cover" /> -->
+            </div>
+          </section>
+
+          <div>
+            <h1 id="h1-title">
               Who's your Avenger?
             </h1>
-            <div id="input-container">
+            <form id="form-frame">
+              <!-- <div id="input"> -->
               <input
                 type="text"
                 name="name"
@@ -60,22 +61,22 @@
                 placeholder="iron man, spider-man, hulk ..."
                 id="hero-input"
               />
+              <!-- </div> -->
 
-              <div class="button">
-                <button id="submit">Submit</button>
-              </div>
-            </div>
-          </form>
+              <!-- <div class="button"> -->
+              <button id="submit">Submit</button>
+              <!-- </div> -->
+            </form>
 
-          <h3 id="return-msg"></h3>
-        </div>
+            <h3 id="return-msg"></h3>
+          </div>
 
-        <!--  API results will go here -->
-        <section id="hero-outer-container">
-          <div class="hero-container"></div>
-        </section>
-      </main>
-
+          <!--  API results will go here -->
+          <section id="hero-outer-container">
+            <div class="hero-container"></div>
+          </section>
+        </main>
+      </div>
       <footer id="footer">
         <small>&copy; Copyright 2020 kaych26 </small>
         <small>"Data provided by Marvel. © 2014 Marvel"</small>

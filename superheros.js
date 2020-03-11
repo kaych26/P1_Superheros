@@ -29,6 +29,8 @@ const heroContainer = document.querySelector(".hero-container");
 const returnMsg = document.querySelector("#return-msg");
 const coverImg = document.querySelector("#hero-cover");
 
+let userInput = "";
+
 // image size - append the size option to the image jpg
 // Reference https://developer.marvel.com/documentation/images
 //
@@ -46,7 +48,6 @@ const getHero = async () => {
 const readResults = result => {
   let allHeros = [];
   for (let i = 0; i < result.length; i++) {
-    // for (let i = 0; i < 1; i++) {
     allHeros.push({
       name: result[i].name,
       img: result[i].thumbnail.path,
@@ -63,11 +64,13 @@ const readResults = result => {
 const displayResults = heros => {
   let html = "";
   let img = "";
+
+  // result the previous results
   heroContainer.innerHTML = "";
 
   for (let i = 0; i < heros.length; i++) {
     console.log(`==>${heros[0].img}`);
-    console.log(heros[0].ext);
+    // console.log(heros[0].ext);
 
     img = `<img src="${heros[i].img}/${marvel_imgSize}.${heros[i].ext}" alt="Superhero Img"></img>`;
     //console.log(img);
@@ -75,15 +78,20 @@ const displayResults = heros => {
   }
 
   if (html) {
+    // remove the cover image before displaying results
     coverImg.style.display = "none";
     heroContainer.innerHTML = html;
-  } else {
+  }
+  // empty result
+  else {
     returnMsg.innerHTML =
       "<p>Not a valid name, please try again (ex. spider-man, iron man, hulk ...)</p>";
   }
 };
 
-let userInput = "";
+//--------------------------------------------------------------------//
+// Main
+//--------------------------------------------------------------------//
 
 form.addEventListener("submit", async event => {
   event.preventDefault();
@@ -101,5 +109,3 @@ form.addEventListener("submit", async event => {
     returnMsg.innerHTML = "<p>Please enter a name...</p>";
   }
 });
-
-// getHero();
