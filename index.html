@@ -7,16 +7,22 @@
       href="https://fonts.googleapis.com/css?family=Bangers&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/css?family=Oxanium&display=swap"
+      rel="stylesheet"
+    />
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script defer src="superheros.js"></script>
     <link rel="stylesheet" type="text/css" media="screen" href="styles.css" />
-    <title>Superhero</title>
+    <title>Advangers</title>
   </head>
   <body>
     <header>
-      <div>
-        <a id="home-link" href="index.html">HOME</a>
+      <div id="marvel-img">
+        <img src="img/marvel.jpeg" alt="MARVEL" />
       </div>
+
+      <!-- <a id="home-link" href="index.html">MARVEL HOME</a> -->
     </header>
 
     <main>
@@ -26,26 +32,36 @@
           <!-- <img src="#" alt="Hero cover" /> -->
         </div>
       </section>
+
+      <div>
+        <form id="form-frame">
+          <h1>
+            Who's your Advanger?
+          </h1>
+          <div id="input-container">
+            <input
+              type="text"
+              name="name"
+              value=""
+              placeholder="iron man, spider-man, ..."
+              id="hero-input"
+            />
+            <div class="button">
+              <button id="submit">Get Hero</button>
+            </div>
+          </div>
+        </form>
+        <h3 id="return-msg"></h3>
+      </div>
     </main>
 
-    <div id="form-frame">
-      <form>
-        <div id="input-container">
-          <label id="hero-text">Superhero Name:</label>
-          <input
-            type="text"
-            name="name"
-            value=""
-            placeholder="iron man, spider man ..."
-            id="hero-input"
-          />
-          <a href="heroList.html">
-            <button id="submit">Get Hero</button>
-          </a>
-        </div>
-      </form>
-    </div>
+    <!--  API results will go here -->
+    <section class="hero-outer-container">
+      <div class="hero-container"></div>
+    </section>
 
-    <section class="hero-container"></section>
+    <footer>
+      <small>"Data provided by Marvel. © 2014 Marvel"</small>
+    </footer>
   </body>
 </html>

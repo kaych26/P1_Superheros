@@ -26,6 +26,7 @@ const form = document.querySelector("form");
 const button = document.querySelector("#submit");
 const input = document.querySelector("#hero-input");
 const heroContainer = document.querySelector(".hero-container");
+const returnMsg = document.querySelector("#return-msg");
 
 // image size - append the size option to the image jpg
 // Reference https://developer.marvel.com/documentation/images
@@ -41,8 +42,8 @@ const getHero = async () => {
   console.log(response);
 };
 
-let allHeros = [];
 const readResults = result => {
+  let allHeros = [];
   for (let i = 0; i < result.length; i++) {
     // for (let i = 0; i < 1; i++) {
     allHeros.push({
@@ -60,6 +61,7 @@ const readResults = result => {
 const displayResults = heros => {
   let html = "";
   let img = "";
+  heroContainer.innerHTML = "";
 
   for (let i = 0; i < heros.length; i++) {
     console.log(`==>${heros[0].img}`);
@@ -69,7 +71,11 @@ const displayResults = heros => {
     //console.log(img);
     html += `<div class="hero-desc">${img}<h3 class="hero-name">${heros[i].name}</h3></div>`;
   }
-  heroContainer.innerHTML = html;
+  if (html) {
+    heroContainer.innerHTML = html;
+  } else {
+    returnMsg.innerHTML = "<p>Unknown Superhero, please try again...</p>";
+  }
 };
 
 let userInput = "";
@@ -80,7 +86,7 @@ form.addEventListener("submit", async event => {
 
   let response = await axios.get(query);
   let result = response.data.data.results;
-  debugger;
+  // debugger;
   readResults(result);
 });
 
