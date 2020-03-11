@@ -27,6 +27,7 @@ const button = document.querySelector("#submit");
 const input = document.querySelector("#hero-input");
 const heroContainer = document.querySelector(".hero-container");
 const returnMsg = document.querySelector("#return-msg");
+const coverImg = document.querySelector("#hero-cover");
 
 // image size - append the size option to the image jpg
 // Reference https://developer.marvel.com/documentation/images
@@ -58,6 +59,7 @@ const readResults = result => {
   }
   displayResults(allHeros);
 };
+
 const displayResults = heros => {
   let html = "";
   let img = "";
@@ -71,7 +73,9 @@ const displayResults = heros => {
     //console.log(img);
     html += `<div class="hero-desc">${img}<h3 class="hero-name">${heros[i].name}</h3></div>`;
   }
+
   if (html) {
+    coverImg.style.display = "none";
     heroContainer.innerHTML = html;
   } else {
     returnMsg.innerHTML = "<p>Unknown Superhero, please try again...</p>";
@@ -79,15 +83,22 @@ const displayResults = heros => {
 };
 
 let userInput = "";
+returnMsg.innerHTML = "";
+
 form.addEventListener("submit", async event => {
   event.preventDefault();
   userInput = input.value;
-  let query = `${marvel_endpoint}&nameStartsWith=${userInput}${auth}`;
 
-  let response = await axios.get(query);
-  let result = response.data.data.results;
-  // debugger;
-  readResults(result);
+  if (userInput) {
+    let query = `${marvel_endpoint}&nameStartsWith=${userInput}${auth}`;
+
+    let response = await axios.get(query);
+    let result = response.data.data.results;
+    // debugger;
+    readResults(result);
+  } else {
+    returnMsg.innerHTML = "<p>Please enter a name...</p>";
+  }
 });
 
 // getHero();
