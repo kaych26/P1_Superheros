@@ -20,58 +20,66 @@
   </head>
 
   <body>
-    <header>
-      <div id="marvel-img">
-        <a href="index.html">
-          <img src="img/marvel.jpeg" alt="MARVEL" width="120px" height="50px" />
-        </a>
+    <div id="page-container">
+      <header>
+        <div id="marvel-img">
+          <a href="index.html">
+            <img
+              src="img/marvel.jpeg"
+              alt="MARVEL"
+              width="100px"
+              height="40px"
+            />
+          </a>
 
-        <!-- <img src="img/marvel.jpeg" alt="MARVEL" /> -->
-      </div>
-      <!-- <div id="home">
+          <!-- <img src="img/marvel.jpeg" alt="MARVEL" /> -->
+        </div>
+        <!-- <div id="home">
         <a id="home-link" href="index.html">HOME</a>
       </div> -->
-    </header>
+      </header>
 
-    <main>
-      <section id="hero-cover">
-        <div id="hero-image">
-          <!-- <img src="img/Marvel-Superheroes.jpg" alt="Hero cover" /> -->
-          <!-- <img src="#" alt="Hero cover" /> -->
-        </div>
-      </section>
-
-      <div>
-        <form id="form-frame">
-          <h1>
-            Who's your Avenger?
-          </h1>
-          <div id="input-container">
-            <input
-              type="text"
-              name="name"
-              value=""
-              placeholder="iron man, spider-man, hulk ..."
-              id="hero-input"
-            />
-
-            <div class="button">
-              <button id="submit">Submit</button>
-            </div>
+      <main>
+        <section id="hero-cover">
+          <div id="hero-image">
+            <!-- <img src="img/Marvel-Superheroes.jpg" alt="Hero cover" /> -->
+            <!-- <img src="#" alt="Hero cover" /> -->
           </div>
-        </form>
-        <h3 id="return-msg"></h3>
-      </div>
-    </main>
+        </section>
 
-    <!--  API results will go here -->
-    <section id="hero-outer-container">
-      <div class="hero-container"></div>
-    </section>
+        <div>
+          <form id="form-frame">
+            <h1>
+              Who's your Avenger?
+            </h1>
+            <div id="input-container">
+              <input
+                type="text"
+                name="name"
+                value=""
+                placeholder="iron man, spider-man, hulk ..."
+                id="hero-input"
+              />
 
-    <footer>
-      <small></small>
-      <small>"Data provided by Marvel. © 2014 Marvel"</small>
-    </footer>
+              <div class="button">
+                <button id="submit">Submit</button>
+              </div>
+            </div>
+          </form>
+
+          <h3 id="return-msg"></h3>
+        </div>
+
+        <!--  API results will go here -->
+        <section id="hero-outer-container">
+          <div class="hero-container"></div>
+        </section>
+      </main>
+
+      <footer id="footer">
+        <small>&copy; Copyright 2020 kaych26 </small>
+        <small>"Data provided by Marvel. © 2014 Marvel"</small>
+      </footer>
+    </div>
   </body>
 </html>

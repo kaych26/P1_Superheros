@@ -78,15 +78,16 @@ const displayResults = heros => {
     coverImg.style.display = "none";
     heroContainer.innerHTML = html;
   } else {
-    returnMsg.innerHTML = "<p>Unknown Superhero, please try again...</p>";
+    returnMsg.innerHTML =
+      "<p>Not a valid name, please try again (ex. spider-man, iron man, hulk ...)</p>";
   }
 };
 
 let userInput = "";
-returnMsg.innerHTML = "";
 
 form.addEventListener("submit", async event => {
   event.preventDefault();
+  returnMsg.innerHTML = "";
   userInput = input.value;
 
   if (userInput) {
