@@ -1,5 +1,10 @@
-# P1_Superheros
-GA Project 1
+P1_Superheros
+GA Project 1 
+
+---------------------
+HTML 
+---------------------
+http://bumpy-expert.surge.sh
 
 ---------------------
  Title:
@@ -13,6 +18,11 @@ GA Project 1
 2. Retrieves a list of superhero data that matches user input.
 3. Data will include superhero image, name, description, etc.
 4. Display image and data in column/row format
+
+---------------------
+LIMITATION
+---------------------
+1. When user enters a superhero name, the API call only returns upto 20 character information.
 
 ---------------------
 Wireframes 

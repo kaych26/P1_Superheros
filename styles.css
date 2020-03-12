@@ -82,26 +82,13 @@ header div {
   padding-bottom: 10px;
 }
 
-/* frame for <user input> and <button> */
-#input-container {
-  /* border: 2px solid purple; */
-  display: inline-block;
-  align-items: center;
-  justify-content: center;
-  padding-bottom: 20px; */
-}
-
 /* user input */
-
 #hero-input {
-  /* border: 1px solid white; */
   width: 35%;
   font-family: "Oxanium", cursive, Arial, Helvetica, sans-serif;
   font-size: 16px;
-
   padding: 5px;
   border-radius: 3px;
-
   outline: none;
 }
 
@@ -126,8 +113,7 @@ header div {
 /* RESULTS  */
 
 .hero-container {
-  /* border: 2px solid blue; */
-  padding-top: 10px;
+  padding-top: 15px;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -137,15 +123,14 @@ header div {
 }
 
 .hero-desc {
-  /* border: 2px solid red; */
-  /* margin-top: 15px; */
-  width: 150px;
+  margin-top: 15px;
+  width: 180px;
   height: 150px;
   text-align: center;
 }
 .hero-name {
   font-family: "Oxanium", cursive, Arial, Helvetica, sans-serif;
-  font-size: 14px;
+  font-size: 12px;
   padding-top: 5px;
   color: white;
 }
@@ -176,7 +161,6 @@ header div {
 
   #hero-input {
     width: 60%;
-
   }
 
   #h1-title {
