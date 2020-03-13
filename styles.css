@@ -4,6 +4,10 @@
   padding: 0;
 }
 
+body {
+  min-width: 375px;
+}
+
 /*  keeping the footer at the bottom of the page */
 /*  #page-container, #content-wrap, #footer copied from */
 /*  https://www.freecodecamp.org/news/how-to-keep-your-footer-where-it-belongs-59c6aa05c59c/  */
@@ -18,7 +22,6 @@
 }
 
 #footer {
-  /* border: 2px solid yellow; */
   font-family: "Oxanium", cursive, Arial, Helvetica, sans-serif;
   position: absolute;
   bottom: 0;
@@ -29,15 +32,12 @@
 }
 
 main {
-  /* border: 5px solid orangered; */
   width: 100%;
-
   background-color: #da1f28;
   border-bottom: 3px solid black;
 }
 
 header {
-  /* border: 2px solid blue; */
   width: 100%;
   height: 60px;
   background-color: #000000;
@@ -45,12 +45,13 @@ header {
   flex-direction: row;
   vertical-align: middle;
 }
+
 header div {
   margin: 0;
 }
+
 /* MARVEL HOME box */
 #marvel-img {
-  /* border: 2px solid yellow; */
   display: flex;
   align-self: center;
   padding-left: 20px;
@@ -58,28 +59,24 @@ header div {
 
 /* superhero cover image frame */
 #hero-cover {
-  /* border: 5px solid green; */
   width: 100%;
   height: 400px;
   background-image: url(img/Marvel-Superheroes.jpg);
   background-size: cover;
 }
-/* cover image */
-
-/* #hero-text  */
 
 #h1-title {
   border-top: 3px solid black;
   text-align: center;
-
   font-family: "Bangers", cursive, Arial, Helvetica, sans-serif;
   font-size: 46px;
-
-  padding: 20px 0;
+  padding: 20px 0 8px 0;
 }
 #form-frame {
-  text-align: center;
-  padding-bottom: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
 /* user input */
@@ -93,21 +90,52 @@ header div {
 }
 
 /* button */
-#submit {
-  border: 2px solid black;
-  padding: 5px 20px;
-  font-size: 15px;
-
-  border-radius: 6px;
-  font-weight: bold;
-
-  background-color: #000000;
-  outline: none;
-  color: white;
+button img {
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  opacity: 1;
+  transition: 0.5s ease;
+  backface-visibility: hidden;
 }
-#submit:hover {
-  /* background-color: red; */
-  border-color: #da1f28;
+
+#captain-frame {
+  position: relative;
+  width: 50%;
+}
+
+#middle {
+  transition: 0.5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 95%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+#submit {
+  border-radius: 50%;
+  margin-left: 10px;
+  background-color: #da1f28;
+  outline: none;
+}
+
+#captain-frame:hover #captain-img {
+  opacity: 0.3;
+}
+#captain-frame:hover #middle {
+  opacity: 1;
+}
+#text {
+  /* color: rgb(37, 102, 151); */
+  font-family: "Bangers", cursive, Arial, Helvetica, sans-serif;
+
+  color: #000000;
+  font-size: 22px;
+  /* padding: 15px 25px; */
+  font-weight: bolder;
 }
 
 /* RESULTS  */
@@ -145,16 +173,25 @@ header div {
   background-color: black;
 }
 
+@media only screen and (max-width: 770px) {
+  #hero-cover {
+    width: 100%;
+    height: 300px;
+  }
+  #h1-title {
+    font-size: 36px;
+  }
+  #return-msg {
+    font-size: 11px;
+  }
+  #footer {
+    font-size: 11px;
+  }
+}
 /* ----------- iPad 1, 2, Mini and Air ----------- */
-
 /* Portrait and Landscape */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
-  #marvel-img {
-    /* height: 80%;
-    width: 80%; */
-  }
   #hero-cover {
-    /* border: 5px solid green; */
     width: 100%;
     height: 300px;
   }
@@ -178,6 +215,9 @@ header div {
   #return-msg {
     font-size: 13px;
   }
+  #footer {
+    font-size: 11px;
+  }
 }
 
 /* ----------- iPhone X ----------- */
@@ -189,7 +229,7 @@ header div {
   }
 
   #h1-title {
-    font-size: 28px;
+    font-size: 32px;
   }
 
   #hero-input {
@@ -205,9 +245,6 @@ header div {
     font-size: 11px;
   }
   #footer {
-    /* display: flex;
-    flex-direction: column;
-    align-items: center; */
     font-size: 11px;
   }
 }
