@@ -5,8 +5,6 @@
 }
 
 /*  keeping the footer at the bottom of the page */
-/*  #page-container, #content-wrap, #footer copied from */
-/*  https://www.freecodecamp.org/news/how-to-keep-your-footer-where-it-belongs-59c6aa05c59c/  */
 
 #page-container {
   position: relative;
@@ -99,6 +97,19 @@ button img {
 #captain-frame {
   position: relative;
   width: 50%;
+}
+
+/* rotate shield submit button */
+#captain-img {
+  animation: rotation 5s infinite linear;
+}
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
 }
 
 #middle {

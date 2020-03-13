@@ -33,11 +33,9 @@ let userInput = "";
 
 // image size - append the size option to the image jpg
 // Reference https://developer.marvel.com/documentation/images
-//
 const marvel_imgSize = "standard_medium";
 
 // axios
-
 const getHero = async () => {
   let response = await axios.get(query);
   let results = response.data.data.results;
@@ -45,6 +43,7 @@ const getHero = async () => {
   console.log(response);
 };
 
+// read API results
 const readResults = result => {
   let allHeros = [];
   for (let i = 0; i < result.length; i++) {
@@ -55,25 +54,20 @@ const readResults = result => {
       desc: result[i].description,
       uri: result[i].resourceURI
     });
-
-    // debugger;
   }
   displayResults(allHeros);
 };
 
+// display the results to html
 const displayResults = heros => {
   let html = "";
   let img = "";
 
-  // result the previous results
+  // clear the previous results
   heroContainer.innerHTML = "";
 
   for (let i = 0; i < heros.length; i++) {
-    console.log(`==>${heros[0].img}`);
-    // console.log(heros[0].ext);
-
     img = `<img src="${heros[i].img}/${marvel_imgSize}.${heros[i].ext}" alt="Superhero Img"></img>`;
-    //console.log(img);
     html += `<div class="hero-desc">${img}<h3 class="hero-name">${heros[i].name}</h3></div>`;
   }
 
@@ -82,7 +76,7 @@ const displayResults = heros => {
     coverImg.style.display = "none";
     heroContainer.innerHTML = html;
   }
-  // empty result
+  // if api returns empty result
   else {
     returnMsg.innerHTML =
       "<p>Not a valid name, please try again (ex. spider-man, iron man, hulk ...)</p>";
@@ -103,9 +97,11 @@ form.addEventListener("submit", async event => {
 
     let response = await axios.get(query);
     let result = response.data.data.results;
-    // debugger;
+
     readResults(result);
-  } else {
+  }
+  // user did not enter name
+  else {
     returnMsg.innerHTML = "<p>Please enter a name...</p>";
   }
 });
